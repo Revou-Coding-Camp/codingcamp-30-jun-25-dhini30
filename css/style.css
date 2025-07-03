@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+  width: 50px;     
+  height: 50px;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: black;
+}
+
+.hero {
+  padding: 40px;
+  text-align: center;
+}
+
+.cat-img img {
+  width: 100%;
+  max-height: 400px; /* sesuaikan tinggi maksimum */
+  object-fit: cover;
+  border-radius: 8px; /* opsional untuk sudut melengkung */
+}
+
+
+.headquarter {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.locations {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.location .circle {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.message {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.form-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+form {
+  flex: 1;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.message-display {
+  flex: 1;
+  border: 1px solid #aaa;
+  padding: 20px;
+}
+
+footer {
+  text-align: right;
+  padding: 10px 20px;
+  background-color: #fff; 
+  border-top: 1px solid #ccc; 
+  font-size: 14px;
+}
