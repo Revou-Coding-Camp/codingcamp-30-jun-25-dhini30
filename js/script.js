@@ -25,9 +25,6 @@ document.getElementById("messageForm").addEventListener("submit", function(event
   document.getElementById("outputGender").textContent = gender;
   document.getElementById("outputPesan").textContent = pesan || "-";
 
-  // Alert sukses
-  alert("Pesan terkirim!");
-
   // Reset form setelah submit
   document.getElementById("messageForm").reset();
 });
