@@ -1,112 +1,229 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #f9c5d1;         /* pink pastel */
+  --primary-light: #ffe9ef;   /* pink muda banget */
+  --bg: #fff8fb;              /* background lembut */
+  --text: #2b2b2b;            /* teks utama abu gelap */
+  --subtext: #666666;         /* teks pelengkap */
+  --card: #fff6f8;            /* background kartu/form */
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.05); /* bayangan lembut */
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  border-bottom: 1px solid #ccc;
+  background: #ffffff;
+  padding: 20px 40px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo img {
-  width: 50px;     
+  width: 50px;
   height: 50px;
-  border-radius: 50%; 
+  border-radius: 12px;
   object-fit: cover;
 }
-
 
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: black;
+  color: var(--text);
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
+nav a:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+/* Hero Section */
 .hero {
-  padding: 40px;
   text-align: center;
+  padding: 70px 20px 40px;
+  background: linear-gradient(to right, #fff0f5, #ffffff); /* ubah gradasi */
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--text);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--subtext);
+}
+
+.cat-img {
+  margin-top: 30px;
 }
 
 .cat-img img {
   width: 100%;
-  max-height: 400px; /* sesuaikan tinggi maksimum */
-  object-fit: cover;
-  border-radius: 8px; /* opsional untuk sudut melengkung */
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.cat-img img:hover {
+  transform: scale(1.05);
 }
 
 
+/* Creative Spaces */
 .headquarter {
-  padding: 40px;
-  background-color: #fff;
+  padding: 60px 20px;
+  background: var(--card);
   text-align: center;
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.locations {
+.headquarter h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 40px;
+}
+
+
+.hq-cards {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.location .circle {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: 0 auto 10px;
+.hq-card {
+  background: #ffe0eb; /* pink lebih tegas */
+  padding: 24px;
+  width: 260px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--primary);
+  transition: transform 0.3s ease;
 }
 
+.hq-card:hover {
+  transform: translateY(-5px);
+}
+
+.hq-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.hq-card p {
+  font-size: 0.95rem;
+  color: var(--subtext);
+}
+
+/* Message Us */
 .message {
-  padding: 40px;
-  background-color: #fff;
+  background-color: #fff2f7; /* dari #f1f5f9 jadi pink pastel */
+  padding: 70px 20px;
+}
+
+.message h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 30px;
 }
 
 .form-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
-  margin-top: 20px;
 }
 
-form {
-  flex: 1;
+form,
+.message-display {
+  background-color: #ffe0eb;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 500px;
 }
 
 form label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-size: 1rem;
+  margin-top: 6px;
 }
 
 textarea {
-  width: 100%;
-  height: 60px;
+  resize: vertical;
+  min-height: 100px;
 }
 
 button {
-  margin-top: 10px;
-  padding: 8px 16px;
+  margin-top: 12px;
+  padding: 12px;
   width: 100%;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.message-display {
-  flex: 1;
-  border: 1px solid #aaa;
-  padding: 20px;
+button:hover {
+  background-color: #f38ba0; /* dari #2563eb */
 }
 
+.message-display p {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+/* Footer */
 footer {
   text-align: right;
-  padding: 10px 20px;
-  background-color: #fff; 
-  border-top: 1px solid #ccc; 
-  font-size: 14px;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  color: #64748b;
 }
